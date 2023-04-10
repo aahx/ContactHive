@@ -23,8 +23,6 @@ export async function createContact() {
 }
 
 export async function getContact(id) {
-    console.log("getContact query", query);
-
     await fakeNetwork(`contact:${id}`);
     let contacts = await localforage.getItem("contacts");
     let contact = contacts.find(contact => contact.id === id);
@@ -71,7 +69,7 @@ async function fakeNetwork(key) {
     }
 
     fakeCache[key] = true;
-    
+
     console.log("fakeCache[key]", fakeCache[key]);
 
     return new Promise(res => {

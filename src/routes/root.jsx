@@ -14,7 +14,8 @@ export default function Root() {
     const { contacts } = useLoaderData();
     // "LEFT OFF AT LOADING DATA SECTION OF TUTORIAL"
     // "LEFT OFF AT LOADING DATA SECTION OF TUTORIAL"
-    
+    // practicing destructuring assignment on codepen
+
     return (
         <>
             <div id="sidebar">

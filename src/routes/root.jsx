@@ -1,6 +1,20 @@
-import { Outlet, Link } from "react-router-dom";
+import { 
+    Outlet, 
+    Link ,
+    useLoaderData,
+} from "react-router-dom";
+import { getContacts } from "../contacts";
+
+export async function loader(){
+    const contacts = await getContacts();
+    return { contacts };
+}
 
 export default function Root() {
+    const { contacts } = useLoaderData();
+    // "LEFT OFF AT LOADING DATA SECTION OF TUTORIAL"
+    // "LEFT OFF AT LOADING DATA SECTION OF TUTORIAL"
+    
     return (
         <>
             <div id="sidebar">

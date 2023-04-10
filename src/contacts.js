@@ -3,20 +3,12 @@ import { matchSorter } from "match-sorter";
 import sortBy from "sort-by";
 
 export async function getContacts(query) {
-    console.log("getContacts query", query);
-
     await fakeNetwork(`getContacts:${query}`);
     let contacts = await localforage.getItem("contacts");
-
-    console.log("getContacts contacts", contacts);
-
     if (!contacts) contacts = [];
-
-    console.log("null", contacts);
     if (query) {
         contacts = matchSorter(contacts, query, { keys: ["first", "last"] });
     }
-    console.log("return" , contacts.sort(sortBy("last", "createdAt")));
     return contacts.sort(sortBy("last", "createdAt"));
 }
 
@@ -68,19 +60,18 @@ function set(contacts) {
 let fakeCache = {};
 
 async function fakeNetwork(key) {
-    console.log("fakeNetwork key", key);
+    console.log("fakeNetwork", key);
     console.log("fakeCache", fakeCache);
 
     if (!key) {
         fakeCache = {};
     }
-    console.log("fakeCache2", fakeCache);
-
     if (fakeCache[key]) {
         return;
     }
 
     fakeCache[key] = true;
+    
     console.log("fakeCache[key]", fakeCache[key]);
 
     return new Promise(res => {

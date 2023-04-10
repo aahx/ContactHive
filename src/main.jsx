@@ -7,12 +7,14 @@ import {
 
 import './index.css'
 import Root from "./routes/root";
+import ErrorPage from './error';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />
+    element: <Root />,
+    errorElement: <ErrorPage />,
   },
 ]);
 

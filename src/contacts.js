@@ -58,22 +58,35 @@ function set(contacts) {
 let fakeCache = {};
 
 async function fakeNetwork(key) {
-    console.log("fakeNetwork", key);
-    console.log("fakeCache", fakeCache);
+    console.log("fakeNetwork");
+    console.log("(1) --- present Cache ---");
+    console.log(fakeCache);
+    console.log("(2) --- Key ---");
+    console.log(key);
+    console.log("(2.5) --- (!key) ---");
+    console.log(!key);
+
+    if (fakeCache[key]) {
+        console.log("** RETURN ** --- fakeCache[key] exists => return")
+        console.log(fakeCache);
+        console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+        return;
+    };
 
     if (!key) {
         fakeCache = {};
-    }
-    if (fakeCache[key]) {
-        return;
-    }
+        console.log("(3) --- !key => fakeCache = {}");
+        console.log(fakeCache);
+    };
 
+    console.log("(4) --- setting fakeCache[key] to true");
     fakeCache[key] = true;
+    console.log(fakeCache);
 
-    console.log("fakeCache[key]", fakeCache[key]);
-
+    console.log("(5) --- return Promise setTimeout res()")
     return new Promise(res => {
         setTimeout(()=> {
+            console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
             res();
         }, Math.random() * 800);
     });

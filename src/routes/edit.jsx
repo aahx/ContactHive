@@ -1,13 +1,37 @@
 import {
     Form,
-    useLoaderData
+    useLoaderData,
+    redirect,
 } from "react-router-dom";
-import { getContact } from "../contacts";
+import { 
+    getContact,
+    updateContact
+} from "../contacts";
 
 export async function loader({ params }){
     const contact = await getContact(params.contactId);
     return { contact }
 };
+
+export async function action({ request, params }){
+    console.log("EDIT Action");
+    console.log("request", request);
+    console.log("params", params);
+    console.log("---------------");
+
+    const formData = await request.formData();
+    console.log("formData = request.formData()", formData);
+    console.log("---------------");
+
+    const updates = Object.fromEntries(formData);
+    console.log("Object.fromEntries(formData");
+    console.log(updates);
+
+
+    await updateContact(params.contactId, updates);
+    return redirect(`/contacts/${params.contactId}`);
+};
+
 
 export default function EditContact(){
     const { contact } = useLoaderData();
@@ -21,7 +45,7 @@ export default function EditContact(){
                     aria-label="First name" 
                     type="text"
                     name="first"
-                    defaultvalue={contact.first}
+                    defaultValue={contact.first}
                 />
                 <input 
                     placeholder="Last"

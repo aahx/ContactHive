@@ -27,7 +27,7 @@ export default function Root() {
                     <form id="search-form" role="search">
                         <input
                             id="q"
-                            aria-aria-label="Aria Label Search Contacts"
+                            aria-label="Aria Label Search Contacts"
                             placeholder="Placeholder Search Contacts"
                             type="search"
                             name="q"

@@ -83,7 +83,7 @@ function Favorite({ contact }) {
             <button
                 name="favorite"
                 value={favorite ? "false" : "true"}
-                aria-aria-label={
+                aria-label={
                     favorite
                         ? "Remove from favorites"
                         : "Add to favorites"

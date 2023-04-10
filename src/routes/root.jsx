@@ -15,6 +15,11 @@ export default function Root() {
     // "LEFT OFF AT LOADING DATA SECTION OF TUTORIAL"
     // "LEFT OFF AT LOADING DATA SECTION OF TUTORIAL"
     // practicing destructuring assignment on codepen
+    // https://codepen.io/SparklingLemonWater/pen/KKGpdBz?editors=0012
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+    // https://reactrouter.com/en/main/start/tutorial#loading-data
+    // https://placekitten.com/
+
 
     return (
         <>

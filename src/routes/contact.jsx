@@ -2,8 +2,8 @@ import { Form } from "react-router-dom";
 
 export default function Contact() {
     const contact = {
-        first: "Your",
-        last: "Name",
+        first: "First",
+        last: "Last",
         avatar: "https://placekitten.com/g/200/200",
         twitter: "your_handle",
         notes: "Some notes",
@@ -28,6 +28,7 @@ export default function Contact() {
                     ) : (
                         <i> No Name</i>
                     )}{" "}
+
                     <Favorite contact={contact} />
                 </h1>
 

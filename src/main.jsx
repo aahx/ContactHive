@@ -7,6 +7,8 @@ import {
 
 import './index.css'
 import ErrorPage from './error';
+import Index from './routes/index';
+
 import Root, { 
   loader as rootLoader,
   action as rootAction,
@@ -28,6 +30,7 @@ const router = createBrowserRouter([
     loader: rootLoader,
     action: rootAction,
     children: [
+      { index: true, element: <Index /> },
       { path: "contacts/:contactId",
         element: <Contact />,
         loader: contactLoader,

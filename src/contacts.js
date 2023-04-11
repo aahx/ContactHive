@@ -6,9 +6,20 @@ export async function getContacts(query) {
     await fakeNetwork(`getContacts:${query}`);
     let contacts = await localforage.getItem("contacts");
     if (!contacts) contacts = [];
+
+
+    console.log("~~~~~~~~~~~~~~~~~~~~~");
+    console.log("getContacts");
+    console.log("--- querey");
+    console.log(query);
+    
     if (query) {
         contacts = matchSorter(contacts, query, { keys: ["first", "last"] });
+        console.log("matchSorter");
+        console.log(contacts);
     }
+    console.log("null query");
+    console.log(contacts.sort(sortBy("last", "createdAt")));
     return contacts.sort(sortBy("last", "createdAt"));
 }
 
@@ -58,35 +69,35 @@ function set(contacts) {
 let fakeCache = {};
 
 async function fakeNetwork(key) {
-    console.log("fakeNetwork");
-    console.log("(1) --- present Cache ---");
-    console.log(fakeCache);
-    console.log("(2) --- Key ---");
-    console.log(key);
-    console.log("(2.5) --- (!key) ---");
-    console.log(!key);
+    // console.log("fakeNetwork");
+    // console.log("(1) --- present Cache ---");
+    // console.log(fakeCache);
+    // console.log("(2) --- Key ---");
+    // console.log(key);
+    // console.log("(2.5) --- (!key) ---");
+    // console.log(!key);
 
     if (fakeCache[key]) {
-        console.log("** RETURN ** --- fakeCache[key] exists => return")
-        console.log(fakeCache);
-        console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+        // console.log("** RETURN ** --- fakeCache[key] exists => return")
+        // console.log(fakeCache);
+        // console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
         return;
     };
 
     if (!key) {
         fakeCache = {};
-        console.log("(3) --- !key => fakeCache = {}");
-        console.log(fakeCache);
+        // console.log("(3) --- !key => fakeCache = {}");
+        // console.log(fakeCache);
     };
 
-    console.log("(4) --- setting fakeCache[key] to true");
+    // console.log("(4) --- setting fakeCache[key] to true");
     fakeCache[key] = true;
-    console.log(fakeCache);
+    // console.log(fakeCache);
 
-    console.log("(5) --- return Promise setTimeout res()")
+    // console.log("(5) --- return Promise setTimeout res()")
     return new Promise(res => {
         setTimeout(()=> {
-            console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
+            // console.log("~~~~~~~~~~~~~~~~~~~~~~~~");
             res();
         }, Math.random() * 800);
     });

@@ -368,6 +368,18 @@ i {
 #contact-form p:last-child button[type="button"] {
     color: inherit;
 }
+#double-zero-state{
+    margin: 2rem auto;
+    text-align: center;
+    color: #818181;
+}
+#double-zero-state a {
+    color: inherit;
+}
+
+#double-zero-state a:hover {
+    color: #121212;
+}
 
 #zero-state {
     margin: 2rem auto;

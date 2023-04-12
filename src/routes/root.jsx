@@ -17,28 +17,12 @@ export async function action() {
 };
 
 export async function loader({ request }) {
-    console.log("Root Loader");
-    console.log("--- request");
-    console.log(request);
-
     const url = new URL(request.url);
-    console.log("--- url");
-    console.log(url);
-
-
     const q = url.searchParams.get("q");
-    console.log("--- q");
-    console.log(q);
-
-    
     const contacts = await getContacts(q);
     return { contacts, q };
 };
 
-// export async function loader() {
-//     const contacts = await getContacts();
-//     return { contacts };
-// };
 
 
 export default function Root() {

@@ -1,4 +1,4 @@
-import { getContacts, createContact } from "../contacts";
+import { getContacts, createContact, updateContact } from "../contacts";
 import {
     Outlet,
     NavLink,
@@ -29,12 +29,38 @@ export default function Root() {
     const { contacts, q } = useLoaderData();
     const navigation = useNavigation();
     const submit = useSubmit();
-
     const searching = navigation.location && new URLSearchParams(navigation.location.search).has("q");
 
     useEffect(() => {
         document.getElementById("q").value = q;
     }, [q])
+
+    // const [michaelExists, setMichaelExists] = useState(false);
+    // useEffect(() => {
+    //     async function createMichael(){
+    //         if(!michaelExists){
+    //             console.log("run once")
+    //             const michaelContactCard = await createContact();
+    //             console.log("my contact card");
+    //             console.log(michaelContactCard);
+    //             console.log("and ID");
+    //             console.log(michaelContactCard.id);
+
+    //             const michaelInfo = {
+    //                 first: "Michael",
+    //                 last: "Kim",
+    //                 avatar: "https://placekitten.com/g/200/200",
+    //                 website: "michael.dev.kim@gmail.com",
+    //                 notes: "website.com/in/michaelkim3",
+    //                 favorite: true,
+    //             };
+    //             await updateContact(michaelContactCard.id, michaelInfo);
+    //             setMichaelExists(true);
+    //         };
+    //     };
+    //     console.log("true?", michaelExists)
+    //     createMichael();
+    // },[])
 
     return (
         <>

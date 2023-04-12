@@ -48,19 +48,19 @@ export default function EditContact(){
                 />
             </p>
             <label>
-                <span>Twitter</span>
+                <span>Website</span>
                 <input 
                     type="text"
-                    name="twitter"
+                    name="website"
                     autoComplete="off"
-                    placeholder="@jack"
-                    defaultValue={contact.twitter}
+                    placeholder="example.com"
+                    defaultValue={contact.website}
                 />
             </label>
             <label>
                 <span>Avatar URL</span>
                 <input
-                    placeholder="https://example.com/avatar.jpg"
+                    placeholder="https://placekitten.com/g/200/200"
                     aria-label="Avatar URL"
                     type="text"
                     autoComplete="off"

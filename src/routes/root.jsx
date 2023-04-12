@@ -64,10 +64,14 @@ export default function Root() {
                             aria-label="Aria Label Search Contacts"
                             placeholder="Placeholder Search Contacts"
                             type="search"
+                            autoComplete="off"
                             name="q"
                             defaultValue={q} 
                             onChange={(event) => {
-                                submit(event.currentTarget.form);
+                                const isFirstSearch = q == null;
+                                submit(event.currentTarget.form, {
+                                    replace: !isFirstSearch,
+                                });
                             }}
                         />
                         <div

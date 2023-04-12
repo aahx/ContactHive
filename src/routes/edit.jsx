@@ -34,6 +34,7 @@ export default function EditContact(){
                     placeholder="First"
                     aria-label="First name" 
                     type="text"
+                    autoComplete="off"
                     name="first"
                     defaultValue={contact.first}
                 />
@@ -41,6 +42,7 @@ export default function EditContact(){
                     placeholder="Last"
                     aria-label="Last name"
                     type="text"
+                    autoComplete="off"
                     name="last"
                     defaultValue={contact.last}
                 />
@@ -50,6 +52,7 @@ export default function EditContact(){
                 <input 
                     type="text"
                     name="twitter"
+                    autoComplete="off"
                     placeholder="@jack"
                     defaultValue={contact.twitter}
                 />
@@ -60,6 +63,7 @@ export default function EditContact(){
                     placeholder="https://example.com/avatar.jpg"
                     aria-label="Avatar URL"
                     type="text"
+                    autoComplete="off"
                     name="avatar"
                     defaultValue={contact.avatar}
                 />
@@ -68,6 +72,7 @@ export default function EditContact(){
                 <span>Notes</span>
                 <textarea 
                     name="notes"
+                    autoComplete="off"
                     defaultValue={contact.notes}
                     row={6}
                 />

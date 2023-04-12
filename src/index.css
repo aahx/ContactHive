@@ -289,33 +289,16 @@ i {
     display: flex;
     font-size: 1.5rem;
     color: #3992ff;
-    color: orange;
     text-decoration: none;
 }
-
 #contact a:hover {
     text-decoration: underline;
 }
 #contact a:visited {
-    color: orange;
-    text-decoration: underline;
-}
-
-/* #contact a[href*="website"] {
-    display: flex;
-    font-size: 1.5rem;
     color: #3992ff;
-    color: orange;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
-#contact a[href*="website"]:hover {
-    text-decoration: underline;
-}
-#contact a[href*="website"]:visited {
-    color: orange;
-    text-decoration: underline;
-} */
 
 #contact img {
     width: 12rem;

@@ -6,7 +6,7 @@ export async function getContacts(query) {
     await fakeNetwork(`getContacts:${query}`);
     let contacts = await localforage.getItem("contacts");
     if (!contacts) contacts = [];
-    
+
     if (query) {
         contacts = matchSorter(contacts, query, { keys: ["first", "last"] });
     }
@@ -26,8 +26,12 @@ export async function createContact() {
 export async function getContact(id) {
     await fakeNetwork(`contact:${id}`);
     let contacts = await localforage.getItem("contacts");
-    let contact = contacts.find(contact => contact.id === id);
-    return contact ?? null;
+    if (contacts) {
+        let contact = contacts.find(contact => contact.id === id);
+        return contact ?? null;
+    } else {
+        return null;
+    }
 }
 
 export async function updateContact(id, updates) {
@@ -69,8 +73,8 @@ async function fakeNetwork(key) {
     fakeCache[key] = true;
 
     return new Promise(res => {
-        setTimeout(()=> {
+        setTimeout(() => {
             res();
-        }, Math.random() * 800);
+        }, Math.random() * 300);
     });
 }

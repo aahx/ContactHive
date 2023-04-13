@@ -39,8 +39,9 @@ async function createMichaelCard() {
         const michaelInfo = {
             first: "Michael",
             last: "Kim",
-            avatar: "https://placekitten.com/200/200",
+            avatar: `https://placekitten.com/200/200?image=${Math.floor(Math.random() * 16) + 1}`,
             website: "www.linkedin.com/in/michaelkim3/",
+            number: "213-477-4574",
             notes: "michael.dev.kim@gmail.com github.com/sparklinglemonwater",
             favorite: true,
         };

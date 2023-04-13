@@ -32,6 +32,7 @@ export default function Contact() {
     //     last: "Last",
     //     avatar: "https://placekitten.com/g/200/200",
     //     website: "your_handle",
+    //     number: "xxx-xxx-xxxx",
     //     notes: "Some notes",
     //     favorite: true,
     // };
@@ -70,6 +71,8 @@ export default function Contact() {
                         </a>
                     </p>
                 )}
+
+                {contact.number && <p>{contact.number}</p>}
 
                 {contact.notes && <p>{contact.notes}</p>}
 

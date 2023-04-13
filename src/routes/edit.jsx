@@ -48,6 +48,18 @@ export default function EditContact(){
                 />
             </p>
             <label>
+                <span>Number</span>
+                <input 
+                    type="tel"
+                    name="number"
+                    autoComplete="off"
+                    placeholder="012-345-6789"
+                    defaultValue={contact.number}
+                    maxLength="12"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                />
+            </label>
+            <label>
                 <span>Website</span>
                 <input 
                     type="text"
@@ -60,12 +72,12 @@ export default function EditContact(){
             <label>
                 <span>Avatar URL</span>
                 <input
-                    placeholder="https://placekitten.com/g/200/200"
+                    placeholder="https://placekitten.com/200/200"
                     aria-label="Avatar URL"
                     type="text"
                     autoComplete="off"
                     name="avatar"
-                    defaultValue={contact.avatar}
+                    defaultValue={contact.avatar ? contact.avatar : `https://placekitten.com/200/200?image=${Math.floor(Math.random() * 16) + 1}`}
                 />
             </label>
             <label>

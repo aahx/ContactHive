@@ -8,7 +8,7 @@ import {
     useNavigation,
     useSubmit,
 } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
 
 export async function action() {
@@ -19,7 +19,7 @@ export async function action() {
 export async function loader({ request }) {
     console.log("root loader running..")
 
-    await getOrCreateMichaelCard();
+    await createMichaelCard();
     console.log("checking michael card");
 
     const url = new URL(request.url);
@@ -29,14 +29,14 @@ export async function loader({ request }) {
     return { contacts, q };
 };
 
-async function getOrCreateMichaelCard() {
-    let michaelId = localStorage.getItem("michaelId");
-    console.log("michaelId from localstorage:", michaelId);
 
-    let michaelExists = await getContact(michaelId);
-    console.log("does michael exist?", michaelExists);
+async function createMichaelCard() {
+    // check local forage for micahel Id
+    let michaelIdStorage = localStorage.getItem("michaelIdStorage");
+    let michaelExists = await getContact(michaelIdStorage);
 
-    if (!michaelExists) {
+    // if null create card
+    if(!michaelExists){
         console.log("creating card");
         const michaelContactCard = await createContact();
         const michaelInfo = {
@@ -44,69 +44,14 @@ async function getOrCreateMichaelCard() {
             last: "Kim",
             avatar: "https://placekitten.com/g/200/200",
             website: "www.linkedin.com/in/michaelkim3/",
-            notes: "michael.dev.kim@gmail.com",
+            notes: "michael.dev.kim@gmail.com github.com/sparklinglemonwater",
             favorite: true,
         };
         await updateContact(michaelContactCard.id, michaelInfo);
-        console.log("michaelContactCard created", michaelContactCard);
-
-        localStorage.setItem("michaelId", michaelContactCard.id);
-        console.log("setting localstorage");
-        console.log(localStorage.getItem("michaelId"));
-
-        michaelExists = await getContact(michaelId);
-    }
-    console.log("return michaelExists");
-    console.log(michaelExists);
+        localStorage.setItem("michaelIdStorage", michaelContactCard.id);
+    };
     return michaelExists;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let michaelId = "";
-// console.log("michaelId", michaelId);
-
-// async function checkMichael(){
-//     const michaelExists = await getContact(michaelId);
-//     console.log("? ----", michaelExists);
-
-//     if(!michaelExists){
-//         const michaelCreated = localStorage.getItem("michaelCreated");
-//         console.log("!michaelExists pre");   
-//         await createMichael();
-//         console.log("!michaelExists post");
-//     } else {
-//         console.log("!michaelExists return");
-//         return;
-//     }
-// };
-
-// async function createMichael(){
-//     const michaelCard = await createContact();
-//     michaelId = michaelCard.id;
-//     const michaelInfo = {
-//         first: "Michael",
-//         last: "Kim",
-//         avatar: "https://placekitten.com/g/200/200",
-//         website: "www.linkedin.com/in/michaelkim3/",
-//         notes: "michael.dev.kim@gmail.com",
-//         favorite: true,
-//     };
-//     await updateContact(michaelCard.id, michaelInfo);
-// };
-
 
 
 export default function Root() {
@@ -119,6 +64,10 @@ export default function Root() {
         document.getElementById("q").value = q;
     }, [q])
 
+
+    useEffect(() => {
+        createMichaelCard();
+    }, [])
 
     return (
         <>

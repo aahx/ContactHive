@@ -17,15 +17,12 @@ export async function action() {
 };
 
 export async function loader({ request }) {
-    console.log("root loader running..")
-
+    // michael card will always exist
     await createMichaelCard();
-    console.log("checking michael card");
 
     const url = new URL(request.url);
     const q = url.searchParams.get("q");
     const contacts = await getContacts(q);
-    console.log("contacts", contacts);
     return { contacts, q };
 };
 

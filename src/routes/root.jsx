@@ -39,7 +39,7 @@ async function createMichaelCard() {
         const michaelInfo = {
             first: "Michael",
             last: "Kim",
-            avatar: "https://placekitten.com/g/200/200",
+            avatar: "https://placekitten.com/200/200",
             website: "www.linkedin.com/in/michaelkim3/",
             notes: "michael.dev.kim@gmail.com github.com/sparklinglemonwater",
             favorite: true,

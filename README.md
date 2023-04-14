@@ -45,7 +45,7 @@
 <!-- Demo -->
 ## Demo
 
-< INSERT DEMO VIDEO HERE >
+https://user-images.githubusercontent.com/105463926/231926319-d8751e33-1c0c-4395-a4bd-d6fe3415f2c7.mp4
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

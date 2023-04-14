@@ -20,6 +20,7 @@
 
 <br />
 
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -106,6 +107,7 @@ Project Link - [https://contacthive.netlify.app/](https://contacthive.netlify.ap
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- ACKNOWLEDGMENTS -->
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 

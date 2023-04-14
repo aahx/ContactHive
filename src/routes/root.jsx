@@ -2,6 +2,7 @@ import { getContacts, createContact, getContact, updateContact } from "../contac
 import {
     Outlet,
     NavLink,
+    Link,
     useLoaderData,
     Form,
     redirect,
@@ -70,7 +71,7 @@ export default function Root() {
     return (
         <>
             <div id="sidebar">
-                <h1><a href="https://contacthive.netlify.app/">React Router Contacts</a></h1>
+                <h1><Link to ="/">React Router Contacts</Link></h1>
                 <div>
                     <Form id="search-form" role="search">
                         <input

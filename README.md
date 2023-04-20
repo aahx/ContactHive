@@ -2,6 +2,7 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -114,6 +115,15 @@ Project Link - [https://contacthive.netlify.app/](https://contacthive.netlify.ap
 * [React Router v6 Tutorial](https://reactrouter.com/en/main)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<hr />
+notes:
+... add a login? (and provide test login and password, with userbase)
+... add socket.io?
+... integrate chatgpt to message
+... integrate redux?
+<hr />
 
 
 

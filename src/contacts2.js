@@ -42,7 +42,6 @@ export async function updateContact(id, updates) {
 export async function deleteContact(id) {
     let contacts = await localforage.getItem("contacts");
     let index = contacts.findIndex(contact => contact.id === id);
-    console.log("delete id", contacts[index].id)
 
     // removing michaelId from localStorage
     if(contacts[index][id] === localStorage.getItem("michaelIdStorage")){

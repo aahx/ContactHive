@@ -13,12 +13,6 @@ export default function Index(){
                 github.com/aahx/ContactHive
             </a>
             <br />
-            <br />
-            Connect with me on LinkedIn
-            <br />
-            <a href="https://www.linkedin.com/in/michael-kim-swe/" target="_blank">
-                linkedin.com/in/michael-kim-swe/
-            </a>
         </p>
         <p id="zero-state">
             This is the demo for React Router v6.10.

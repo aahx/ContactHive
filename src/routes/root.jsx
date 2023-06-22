@@ -41,9 +41,9 @@ async function createMichaelCard() {
             first: "Michael",
             last: "Kim",
             avatar: `https://placekitten.com/200/200?image=${Math.floor(Math.random() * 16) + 1}`,
-            website: "www.linkedin.com/in/michael-kim-swe/",
+            website: "www.github.com/aahx/",
             number: "213-477-4574",
-            notes: "michael.swe.kim@gmail.com  github.com/aahx",
+            notes: "No need to login. Create a contact. Saved to your Local Storage!",
             favorite: true,
         };
         await updateContact(michaelContactCard.id, michaelInfo);

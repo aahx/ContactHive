@@ -9,15 +9,15 @@ export default function Index(){
             <br />
             Check out this repo at
             <br />
-            <a href="https://github.com/sparklingwaterlemon/Contact-List" target="_blank">
-                github.com/sparklingwaterlemon
+            <a href="https://github.com/aahx/ContactHive" target="_blank">
+                github.com/aahx/ContactHive
             </a>
             <br />
             <br />
             Connect with me on LinkedIn
             <br />
-            <a href="https://www.linkedin.com/in/michaelkim3/" target="_blank">
-                linkedin.com/in/michaelkim3
+            <a href="https://www.linkedin.com/in/michael-kim-swe/" target="_blank">
+                linkedin.com/in/michael-kim-swe/
             </a>
         </p>
         <p id="zero-state">

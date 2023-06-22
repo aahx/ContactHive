@@ -1,7 +1,4 @@
 <a name="readme-top"></a>
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -37,7 +34,7 @@
         <li><a href="#miscellaneous">Miscellaneous</a></li>
       </ul>
     </li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#link">Link</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -98,10 +95,8 @@ https://user-images.githubusercontent.com/105463926/231926319-d8751e33-1c0c-4395
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- CONTACT -->
-## Contact
-
-Michael Kim - [in/michaelkim3/](https://www.linkedin.com/in/michaelkim3/) - michael.dev.kim@gmail.com
+<!-- Link -->
+## Link
 
 Project Link - [https://contacthive.netlify.app/](https://contacthive.netlify.app/)
 
@@ -128,9 +123,5 @@ notes:
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/michael-kim-swe/
-
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/

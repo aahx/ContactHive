@@ -1,12 +1,14 @@
 <a name="readme-top"></a>
 
+
+
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
 <h1 align="center">Contact Hive</h1>
-
   <p align="center">
-    Contact Hive is a web application that serves as a contact list holder. It is built using the new version of React Router (6.10.0) and uses Vite as its bundler.
+    
+Developed a fully functioning Contact List with the latest React Router v6.10. The application includes a search bar to efficiently search through contacts, Optimistic UI for seamless user experience, full CRUD operations (Create, Read, Update, Delete), loaders and fetchers for data handling, and contacts stored in the browser's local storage. Bundled with Vite.
     <br />
     <br />
     <a href="https://contacthive.netlify.app/" target="_blank"><strong>Live Link »</strong></a>
